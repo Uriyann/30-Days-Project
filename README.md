@@ -1,4 +1,4 @@
-### 🚀 30 Days – 30 Projects (HTML • CSS • JavaScript)
+# 🚀 30 Days – 30 Projects (HTML • CSS • JavaScript)
 
 A self-paced **30-day front-end challenge** where I build **one project per day** using **HTML, CSS, and beginner-level JavaScript**.  
 The goal of this challenge is to **improve consistency, strengthen fundamentals, and gain confidence in JavaScript through hands-on projects**.
@@ -91,7 +91,7 @@ A main website will be created to display all projects in one place.
 - Optimize for mobile
 - Rewrite projects with better JavaScript practices
 
-# ✨ Author
+## ✨ Author
 
 Nyxth-666
 Frontend Developer (In Progress 🚧)
