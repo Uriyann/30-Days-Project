@@ -194,4 +194,11 @@ main {
     font-size: 1rem;
     font-weight: 400;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submitbtn:hover {
+    background: linear-gradient(85deg, #2874FF -21.13%, #87B1FF 117.41%);
+    transform: scale(1.03);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.30);
 }
