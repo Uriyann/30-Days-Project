@@ -1,0 +1,197 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:opsz,wght@14..32,100..900&family=Lilita+One&family=Pacifico&family=Roboto:wght@100..900&display=swap');
+
+/* Styles for the Color Flipper project */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "IBM Plex Mono";
+}
+
+body {
+    background-color: #F3F5F7;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    padding: 10px 60px;
+}
+
+nav {
+    max-width: 1400px;
+    width: 100%;
+}
+
+nav h1 {
+    color: #000;
+    font-family: "IBM Plex Mono";
+    font-size: 3rem;
+}
+
+main {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    width: 64.75rem;
+    height: 50rem;
+    padding: 27px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    border-radius: 32px;
+    background: #E5F1FF;
+    box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.40);
+}
+
+.box .color-box {
+    width: 47rem;
+    height: 46rem;
+    border-radius: 32px;
+    background: #FF0606;
+    box-shadow: 0 0 12.1px 0 rgba(0, 0, 0, 0.67);
+}
+
+.main-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
+    top: 30%;
+    left: 18%;
+    width: 28rem;
+    height: 29rem;
+    gap: 128px;
+    border-radius: 32px;
+    background: #fcffff;
+    box-shadow: 0 0 18.6px 0 rgba(0, 0, 0, 0.36);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+    width: 400px;
+}
+
+.title {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.title h3 {
+    color: #2C2C2C;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 31px;
+    align-self: stretch;
+}
+
+.mode-toggle {
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+}
+
+.mode-toggle .toggle-btn {
+    width: 4.6rem;
+    height: 1.5rem;
+    border: none;
+    background: #6A7BB5;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.mode-toggle .toggle-btn:hover {
+    background: #2b66d4;
+}
+
+.color-input {
+    display: flex;
+    align-self: stretch;
+    position: relative;
+}
+
+.color-input button {
+    position: absolute;
+    height: 3.7rem;
+    width: 3.4rem;
+    border-radius: 12px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.color-input button span {
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.color-input button:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.color-input input {
+    width: 100%;
+    padding: 12px 12px 12px 55px;
+    height: 3.7rem;
+    border-radius: 12px;
+    border: 1.5px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.color-input input:focus {
+    border: 1.5px solid #2874FF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+}
+
+.submitbtn {
+    display: flex;
+    width: 11rem;
+    height: 3rem;
+    padding: 15px 61px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(85deg, #87B1FF -21.13%, #2874FF 117.41%);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
