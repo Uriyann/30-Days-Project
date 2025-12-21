@@ -1,9 +1,26 @@
-## DrumKit Website
+# 📌 Drum Kit
 
-Fully functioning Drums w/ sound
+## 📖 Description
+A drum kit mini game consisting of 6 keys with 6 different drum sounds.
 
-## Keys:
+---
 
-[A] [S] [D] [F] [G] [H]
+## 🛠 Built With
+- HTML
+- CSS
+- JavaScript (Beginner)
 
-# 1/30
+---
+
+## 🎯 Features
+- Key [A] [S] [D] [F] [G] [H]
+
+---
+
+## 📸 Screenshot
+tba
+
+---
+
+## 📅 Day
+Day 01 of 30 Days – 30 Projects Challenge
