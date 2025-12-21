@@ -125,7 +125,7 @@ main {
     width: 4.6rem;
     height: 1.5rem;
     border: none;
-    background: #6A7BB5;
+    background: #6f91ff;
     color: #000;
     font-size: 1rem;
     font-weight: 300;
@@ -134,7 +134,12 @@ main {
 }
 
 .mode-toggle .toggle-btn:hover {
-    background: #2b66d4;
+    background: #2c76ff;
+}
+
+.mode-toggle .active {
+    background: #2c76ff;
+    font-weight: 600;
 }
 
 .color-input {
@@ -160,7 +165,7 @@ main {
 }
 
 .color-input button:hover {
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(189, 150, 150, 0.15);
 }
 
 .color-input input {
