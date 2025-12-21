@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Flipper</title>
+    <link rel="stylesheet" href="color-flip.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=colors,shuffle" />
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <h1>Color Flipper</h1>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="box">
+                <div class="color-box" id="colorBox"></div>
+            </div>
+
+            <div class="main-menu">
+                <div class="content">
+                    <div class="title">
+                        <span class="material-symbols-outlined">colors</span>
+                        <h3>Color</h3>
+                    </div>
+                    <div class="color">
+                        <div class="mode-toggle">
+                            <button id="hexBtn" class="toggle-btn active">Hex</button>
+                            <button id="rgbBtn" class="toggle-btn">Rgb</button>
+                        </div>
+
+                        <div class="color-input">
+                            <button id="randomBtn"><span class="material-symbols-outlined">shuffle</span></button>
+                            <input type="text" id="colorInput" placeholder="Enter color code...">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="submitbtn" id="submitBtn">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="color-flip.js"></script>
 </body>
 </html>
