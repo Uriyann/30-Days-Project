@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter App</title>
+    <link rel="stylesheet" href="counter-app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=replay" />
 </head>
 <body>
-    
+    <main>
+        <div class="wrapper">
+            <h1 id="digitNum" class="digit">00</h1>
+            <div class="boxes">
+                <button id="decrementBtn" class="sign decrement">-</button>
+                <button id="resetBtn" class="sign reset">Reset</button>
+                <button id="incrementBtn" class="sign increment">+</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="counter-app.js"></script>
 </body>
 </html>
