@@ -1,15 +1,21 @@
-// Type your code below
-let a = 9;
-let b = 2.6;
-let c = 11;
-let d = a % b;
-let e = a % c;
-let f = c % e;
+const digitNum = document.getElementById('digitNum');
+const decrementBtn = document.getElementById('decrementBtn');
+const resetBtn = document.getElementById('resetBtn');
+const incrementBtn = document.getElementById('incrementBtn');
 
-// Don't change the line below
-console.log(`a = ${a}`)
-console.log(`b = ${b}`)
-console.log(`c = ${c}`)
-console.log(`d = ${d}`)
-console.log(`e = ${e}`)
-console.log(`f = ${f}`)
+let count = 0;
+
+decrementBtn.onclick = () => {
+    count -= 1;
+    digitNum.textContent = count;
+};
+
+resetBtn.onclick = () => {
+    count = 0;
+    digitNum.textContent = count;
+};
+
+incrementBtn.onclick = () => {
+    count += 1;
+    digitNum.textContent = count;
+};
