@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Pop-up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-    
+    <main>
+        <div class="subscription">
+            <div class="header">
+                <h1>Subscription</h1>
+                <button class="exitbtn" id="subExit"><span class="material-symbols-outlined">close</span></button>
+            </div>
+            <div class="content">
+                <p>Join us for the latest updates! subscribe to our newsletter and stay updated with the insightful articles latest trend and exclusive offers.</p>
+                <div class="input-group">
+                    <input type="text" id="subInput" required>
+                    <label for="subInput">Enter Your Email</label>
+                </div>
+                <button class="subscribebtn" id="subBtn">SUBSCRIBE NOW</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modalPopup">
+            <div class="header">
+                <h1>Confirmation</h1>
+                <button class="exitbtn" id="modalExit"><span class="material-symbols-outlined">close</span></button>
+            </div>
+            <div class="content">
+                <p>Are you sure you want to share this post on your social media? Sharing this content will let your friends and followers know about it.</p>
+                <button class="cancelbtn" id="cancelBtn">CANCEL</button>
+                <button class="sharebtn" id="shareBtn">SHARE</button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
