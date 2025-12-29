@@ -19,4 +19,3 @@ cancelBtn.onclick = () => {
     modalPopup.style.display = "none";
     modalPopup.style.opacity = 0;
 }
-
