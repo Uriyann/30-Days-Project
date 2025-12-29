@@ -10,10 +10,10 @@
 <body>
     <main>
         <div class="subscription">
-            <div class="header">
+            <header>
                 <h1>Subscription</h1>
-                <button class="exitbtn" id="subExit"><span class="material-symbols-outlined">close</span></button>
-            </div>
+                <button id="subExit"><span class="material-symbols-outlined">close</span></button>
+            </header>
             <div class="content">
                 <p>Join us for the latest updates! subscribe to our newsletter and stay updated with the insightful articles latest trend and exclusive offers.</p>
                 <div class="input-group">
@@ -25,14 +25,16 @@
         </div>
 
         <div class="modal" id="modalPopup">
-            <div class="header">
+            <header>
                 <h1>Confirmation</h1>
-                <button class="exitbtn" id="modalExit"><span class="material-symbols-outlined">close</span></button>
-            </div>
+                <button id="modalExit"><span class="material-symbols-outlined">close</span></button>
+            </header>
             <div class="content">
                 <p>Are you sure you want to share this post on your social media? Sharing this content will let your friends and followers know about it.</p>
-                <button class="cancelbtn" id="cancelBtn">CANCEL</button>
-                <button class="sharebtn" id="shareBtn">SHARE</button>
+                <div class="modal-buttons">
+                    <button class="cancelbtn" id="cancelBtn">CANCEL</button>
+                    <button class="sharebtn" id="shareBtn">SHARE</button>
+                </div>
             </div>
         </div>
     </main>
