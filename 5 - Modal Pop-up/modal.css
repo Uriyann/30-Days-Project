@@ -189,6 +189,15 @@ header button:active,
     gap: 19px;
     border-radius: var(--border-radius);
     box-shadow: var(--border-shadow);
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    animation-name: animatop;
+    animation-duration: 0.4s;
+}
+
+@keyframes animatop {
+    from {top: -300px; opacity: 0}
+    to {top: 30%; opacity: 1}
 }
 
 .modal-buttons {
