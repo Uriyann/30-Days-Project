@@ -31,7 +31,6 @@ main {
     width: 100%;
     margin: 0 auto;
     margin-top: 200px;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,12 +175,23 @@ header button:active,
     transform: scale(1);
 }
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
 .modal {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    display: none;
-    opacity: 0;
+    margin: 15% auto;
     width: 651px;
     height: 312px;
     padding: 24px 26px;
@@ -189,7 +199,7 @@ header button:active,
     gap: 19px;
     border-radius: var(--border-radius);
     box-shadow: var(--border-shadow);
-    z-index: 1;
+    z-index: 2;
     transition: all 0.3s ease-in-out;
     animation-name: animatop;
     animation-duration: 0.4s;
@@ -197,7 +207,7 @@ header button:active,
 
 @keyframes animatop {
     from {top: -300px; opacity: 0}
-    to {top: 30%; opacity: 1}
+    to {top: 15%; opacity: 1}
 }
 
 .modal-buttons {
