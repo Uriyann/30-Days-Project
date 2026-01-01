@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=flag,play_arrow,replay" />
 </head>
 <body>
-    
+    <main>
+        <section class="timer-section">
+            <div class="timer" id="timer">
+                <span>00</span>:
+                <span>00</span>:
+                <span>00</span>:
+                <span>00</span>
+            </div>
+            <div class="timer-buttons">
+                <button id="startButton"><span class="material-symbols-outlined">play_arrow</span>Play</button>
+                <button id="lapButton"><span class="material-symbols-outlined">flag</span>Lap</button>
+                <button id="resetButton"><span class="material-symbols-outlined">replay</span>Reset</button>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
