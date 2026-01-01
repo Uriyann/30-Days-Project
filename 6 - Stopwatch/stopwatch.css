@@ -11,6 +11,7 @@
     --text-color: #65756B;
     --border-radius: 10px;
     --border-shadow: 0 4px 26px 0 rgba(0, 0, 0, 0.35);
+    --timer-shadow: 0 4px 26px rgba(0, 0, 0, 0.35);
 }
 
 * {
@@ -22,12 +23,116 @@
 
 body {
     background-color: var(--bg-color);
-    height: 100vh;
+    height: 100vh - 140px;
     width: 100vw;
     align-items: center;
     justify-content: center;
 }
 
 main {
-    
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+}
+
+.timer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.timer-section .timer {
+    font-size: 80px;
+    font-weight: bolder;
+    line-height: auto;
+    color: var(--primary-color);
+    text-shadow: var(--timer-shadow);
+}
+
+.timer-section .timer-buttons {
+    display: flex;
+    gap: 21px;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    gap: 7px;
+    padding: 12px 17px;
+    border-radius: 50px;
+    color: var(--tertiary-color);
+    box-shadow: var(--border-shadow);
+    border: none;
+    cursor: pointer;
+    transform: all 0.3s ease-in-out;
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+.timer-buttons .startbtn {
+    width: 121px;
+    background-color: var(--primary-color);
+}
+
+.timer-buttons .lapbtn {
+    width: 107px;
+    background-color: #6C757D;
+}
+
+.timer-buttons .resetbtn {
+    width: 124px;
+    background-color: #FF6B81;
+}
+
+.record-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+}
+
+.record-section .record-content {
+    display: flex;
+    flex-direction: column;
+    width: 247px;
+    height: 113px;
+    pad: 23px 49px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--border-shadow);
+    background: var(--secondary-color);
+}
+
+.record-section .record-content .record {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: var(--timer-shadow);
+}
+
+.record-section .record-content h2 {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
 }
