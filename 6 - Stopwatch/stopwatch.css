@@ -83,7 +83,7 @@ main {
     box-shadow: var(--border-shadow);
     border: none;
     cursor: pointer;
-    transform: all 0.3s ease-in-out;
+    transition: all 0.2s ease;
     font-size: 20px;
     font-weight: 500px;
 }
@@ -101,6 +101,18 @@ main {
 .timer-buttons .resetbtn {
     width: 124px;
     background-color: #FF6B81;
+}
+
+.startbtn:hover,
+.lapbtn:hover,
+.resetbtn:hover {
+    transform: scale(1.05);
+}
+
+.startbtn:active,
+.lapbtn:active,
+.resetbtn:active {
+    transform: scale(1);
 }
 
 .record-section {
@@ -164,16 +176,46 @@ main {
 }
 
 .lap-section header button {
-    display: flex;
+    display: inline-flex;
     width: 30px;
     height: 30px;
-    padding: 4px;
-    align-items: center;
-    justify-content: center;
+    padding: 3px;
+    gap: 7px;
     background: var(--tertiary-color);
-    border-radius: 50%;
+    border-radius: 999px;
+    align-items: center;
+    color: var(--secondary-color);
+    overflow: hidden;
     border: none;
+    transition: width 0.2s ease, background 0.2s ease;
     cursor: pointer;
+}
+
+.lap-section header button .label {
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lap-section header button:hover {
+    justify-content: center;
+    width: 90px;
+    background: #ef4444;
+}
+
+.lap-section header button:hover .label {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--tertiary-color);
+}
+
+.lap-section header button:hover .icon {
+    font-variation-settings: 'GRAD' -25;
+}
+
+.lap-section header button:active {
+    transform: scale(0.9);
 }
 
 .lap-section .lap-history {
