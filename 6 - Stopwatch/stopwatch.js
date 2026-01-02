@@ -40,16 +40,16 @@ const label = document.querySelector('.start-label');
 // Functions
 
 // Buttons
-
 // Start/Pause Changes
 let running = false;
 
 startButton.addEventListener('click', () => {
-    running != running;
+    running = !running;
 
     if (running) {
         icon.textContent = "pause";
         label.textContent = "Pause";
+        toggleStartPause();
     } else {
         icon.textContent = "play_arrow";
         label.textContent = "Play";
@@ -57,28 +57,34 @@ startButton.addEventListener('click', () => {
     }
 });
 
+// Lap Button
+lapButton.addEventListener('click', () => {
+    lap();
+})
+
 // Reset Button
 resetButton.addEventListener('click', () => {
-    reset()
+    reset();
 });
 
-// Main Timer
 
+// Variables
 let elapsedTime = 0;
 let timeInterval = null;
 let isRunning = false;
 let laps = [];
 
+// Timer Function
 function formatTime(ms) {
     const hours = Math.floor(ms / 3600000);
     const minute = Math.floor((ms % 3600000) / 60000);
-    const seconds = Math.floor((ms % 3600000) / 1000);
+    const seconds = Math.floor((ms % 600000) / 1000);
     const milliseconds = ms % 1000;
 
-    mainHour.textContent = hours;
-    mainMin.textContent = minute;
-    mainSec.textContent = seconds;
-    mainMs.textContent = milliseconds;
+    mainHour.textContent = hours.toString().padStart(2, "0");
+    mainMin.textContent = minute.toString().padStart(2, "0");
+    mainSec.textContent = seconds.toString().padStart(2, "0");
+    mainMs.textContent = milliseconds.toString().padStart(2, "0");
 };
 
 // Start/Pause Timer
@@ -92,25 +98,25 @@ function toggleStartPause() {
             const now = Date.now();
             elapsedTime += now - lastTime;
             lastTime = now;
-            formatTime();
+            formatTime(elapsedTime);
         }, 10)
         isRunning = true;
     }
 };
 
-// Display Update
-// function updateDisplay() {
-//     mainHour.textContent = hours;
-//     mainMin.textContent = minute;
-//     mainSec.textContent = seconds;
-//     mainMs.textContent = milliseconds;
-// }
+// Lap
+function lap() {
+    if (!isRunning) return;
+    laps.push(elapsedTime);
+    console.log(formatTime(elapsedTime));
+    console.log(laps)
+};
 
 // Reset
 function reset() {
     clearInterval(timeInterval);
     elapsedTime = 0;
     isRunning = false;
-    laps = []
-    formatTime(ms);
-}
+    laps = [];
+    formatTime(0);
+};
