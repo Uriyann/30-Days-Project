@@ -56,10 +56,9 @@ startButton.addEventListener('click', () => {
 
 // Lap Button
 lapButton.addEventListener('click', () => {
-    if (isRunning) return;
+    if (!isRunning) return;
 
     laps.push(elapsedTime);
-    
     updateLapsTime();
 })
 
@@ -79,25 +78,25 @@ let laps = [];
 function formatTime(ms) {
     const hours = Math.floor(ms / 3600000);
     const minute = Math.floor((ms % 3600000) / 60000);
-    const seconds = Math.floor((ms % 600000) / 1000);
+    const seconds = Math.floor((ms % 60000) / 1000);
     const milliseconds = ms % 1000;
 
     mainHour.textContent = hours.toString().padStart(2, "0");
     mainMin.textContent = minute.toString().padStart(2, "0");
     mainSec.textContent = seconds.toString().padStart(2, "0");
-    mainMs.textContent = milliseconds.toString().padStart(2, "0");
+    mainMs.textContent = milliseconds.toString().padStart(3, "0");
 };
 
 function setTimeLap(ms, hrE1, minE1, secE1, msE1) {
     const hours = Math.floor(ms / 3600000);
     const minute = Math.floor((ms % 3600000) / 60000);
-    const seconds = Math.floor((ms % 600000) / 1000);
+    const seconds = Math.floor((ms % 60000) / 1000);
     const milliseconds = ms % 1000;
 
     hrE1.textContent = hours.toString().padStart(2, "0");
     minE1.textContent = minute.toString().padStart(2, "0");
     secE1.textContent = seconds.toString().padStart(2, "0");
-    msE1.textContent = milliseconds.toString().padStart(2, "0");
+    msE1.textContent = milliseconds.toString().padStart(3, "0");
 }
 
 // Start/Pause Timer
@@ -123,7 +122,7 @@ function toggleStartPause() {
 function updateLapsTime() {
     if (laps.length === 0) return;
 
-    const lowest = Math.min(...laps);
+    const lowest = Math.max(...laps);
     const highest = Math.min(...laps);
 
     const total = laps.reduce((sum, lap) => sum + lap, 0);
