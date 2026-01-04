@@ -38,7 +38,7 @@ const label = document.querySelector('.start-label');
 
 // Lap History
 const lapList = document.getElementById('lapList');
-
+const lapDeleteHistory = document.getElementById('lapDeleteHistory');
 
 
 
@@ -82,6 +82,11 @@ lapButton.addEventListener('click', () => {
 // Reset Button
 resetButton.addEventListener('click', () => {
     reset();
+});
+
+// Lap History Clear Button
+lapDeleteHistory.addEventListener('click', () => {
+    clearLapHistory();
 });
 
 // Variables
@@ -171,6 +176,10 @@ function formatLapTime(ms) {
 function formatLapGap(ms) {
     const sign = ms >= 0 ? "+" : "-";
     return sign + formatLapTime(Math.abs(ms));
+};
+
+function clearLapHistory() {
+    lapList.innerHTML = '';
 };
 
 // Reset
