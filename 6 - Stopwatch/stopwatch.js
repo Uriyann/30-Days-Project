@@ -36,6 +36,9 @@ const resetButton = document.getElementById('resetButton');
 const icon = document.querySelector('.start-icon');
 const label = document.querySelector('.start-label');
 
+// Lap History
+const lapList = document.querySelector('lapList');
+
 
 // Functions
 
@@ -47,7 +50,6 @@ startButton.addEventListener('click', () => {
     if (isRunning) {
         icon.textContent = "pause";
         label.textContent = "Pause";
-        
     } else {
         icon.textContent = "play_arrow";
         label.textContent = "Play";
@@ -130,14 +132,32 @@ function updateLapDisplay(lowest, highest, average) {
     displayTime(formatTime(average), avgHour, avgMin, avgSec, avgMs);
 };
 
+// Lap History Display
+function addLapHistory(lapNumber, lapTime, lapGap) {
+    const lapRow = document.createElement('div');
+    lapRow.className = 'lap-row';
+
+    lapRow.innerHTML = `
+        <span class="lap-name>Lap ${lapNumber}</span>
+        <span class="lap-time>${lapTime}</span>
+        <span class="lap-gap>${lapGap}</span>
+    `;
+
+    lapList.prepend(lapRow);
+};
+
 // Reset
 function reset() {
     clearInterval(timeInterval);
     elapsedTime = 0;
     isRunning = false;
     laps = [];
+
     displayTime(formatTime(0), mainHour, mainMin, mainSec, mainMs);
     displayTime(formatTime(0), lowHour, lowMin, lowSec, lowMs);
     displayTime(formatTime(0), topHour, topMin, topSec, topMs);
     displayTime(formatTime(0), avgHour, avgMin, avgSec, avgMs);
+
+    icon.textContent = "play_arrow";
+    label.textContent = "Play";
 };
