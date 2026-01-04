@@ -166,7 +166,11 @@ function formatLapTime(ms) {
             `${timeResult.minute.toString().padStart(2, "0")}:` +
             `${timeResult.seconds.toString().padStart(2, "0")}:` +
             `${timeResult.milliseconds.toString().padStart(3, "0")}:`
-            
+};
+
+function formatLapGap(ms) {
+    const sign = ms >= 0 ? "+" : "-";
+    return sign + formatLapTime(Math.abs(ms));
 };
 
 // Reset
@@ -183,4 +187,6 @@ function reset() {
 
     icon.textContent = "play_arrow";
     label.textContent = "Play";
+
+    lapList.innerHTML = '';
 };
