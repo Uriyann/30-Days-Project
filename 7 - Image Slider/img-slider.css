@@ -19,7 +19,7 @@ body {
     font-family: Inter;
     background: var(--bg-color);
     color: var(--text-color);
-    min-height: 100vh;
+    min-height: calc(100vh - 9.125rem);
 }
 
 li {
@@ -52,11 +52,15 @@ main {
     width: 68.75rem;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 1.25rem;
+    border: solid 1.25 transparent;
+    transition: border 0.3s ease;
 }
 
 .slider {
     display: flex;
     transition: transform 0.4s ease-in-out;
+    border-radius: 1.25rem;
 }
 
 .items {
@@ -64,12 +68,23 @@ main {
     flex: 0 0 100%;
     width: 100%;
     height: 40rem;
+    border-radius: 1.25rem;
+}
+
+.items:hover img {
+    transform: scale(1.1);
+}
+
+.slide-show-container:hover {
+    border: solid .125rem #fff;
 }
 
 .items img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1.25rem;
+    transition: transform 0.3s ease;
 }
 
 .items span {
