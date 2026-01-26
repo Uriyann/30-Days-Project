@@ -66,3 +66,9 @@ Navigation Bar
         -0.5rem 0 6.25rem .4375rem rgba(0, 0, 0, 0.35) inset,
         .3125rem 0 .625rem .0625rem rgba(0, 0, 0, 0.35);
 }
+
+.side-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
