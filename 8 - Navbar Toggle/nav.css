@@ -180,6 +180,8 @@ Navigation Bar
 }
 
 .nav-link span {
+    transform-origin: left;
+    transform: scaleX(1);
     white-space: nowrap;
     overflow: hidden;
     max-width: 120px;
@@ -202,12 +204,38 @@ Navigation Bar
 }
 
 .logout-button span {
+    transform-origin: left;
+    transform: scaleX(1);
     white-space: nowrap;
     overflow: hidden;
     max-width: 120px;
     opacity: 1;
     font-size: 1.05rem;
     font-weight: 700;
+}
+
+/* 
+===============
+Navigation Bar TRANSITIONS
+=============== 
+*/
+
+.side-nav-bar,
+#close,
+#open,
+.logo,
+.profile-wrapper,
+.user-wrapper,
+.logout-button span,
+.nav-link span,
+.nav-link,
+.logout-button {
+    transition:
+        max-width 0.25s ease,
+        margin 0.25s ease,
+        padding 0.25s ease,
+        opacity 0.25s ease,
+        gap 0.25s ease;
 }
 
 /* 
@@ -250,6 +278,7 @@ Navigation Bar ACTIVE
 .side-nav-bar.active .nav-link span {
     opacity: 0;
     max-width: 0;
+    transform: scaleX(0);
 }
 
 .side-nav-bar.active .nav-link {
