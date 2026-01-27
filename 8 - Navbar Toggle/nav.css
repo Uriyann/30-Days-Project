@@ -91,6 +91,7 @@ Navigation Bar
 }
 
 .close-button-container button {
+    display: flex;
     background: transparent;
     width: 1.875rem;
     height: 1.875rem;
@@ -265,6 +266,7 @@ Navigation Bar ACTIVE
 }
 
 .side-nav-bar.active #close .menu {
+    flex: 1;
     white-space: nowrap;
     max-width: 120px;
     opacity: 1;
