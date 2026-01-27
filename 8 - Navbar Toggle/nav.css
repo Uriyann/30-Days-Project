@@ -8,6 +8,7 @@
     --secondary-text-color: #d3d3d3;
     --tertiary-text-color: #2f2f2f;
     --nav-link-color: #4D4D91;
+    --hover-link-color: #333391;
     --active-link-color: #4141B4;
 }
 
@@ -100,12 +101,17 @@ Navigation Bar
 
 .close-button-container button i {
     color: var(--primary-text-color);
+    transform: scaleX(1);
 }
 
-#open {
-    position: absolute;
+.close-button-container button .exit {
+    white-space: nowrap;
+    max-width: 120px;
+}
+
+.close-button-container button .menu {
     opacity: 0;
-    pointer-events: none;
+    max-width: 0;
 }
 
 /* User Info */
@@ -175,7 +181,11 @@ Navigation Bar
     background: var(--nav-link-color);
 }
 
-.nav-link.active {
+.nav-link:hover {
+    background: var(--hover-link-color);
+}
+
+.nav-link:focus {
     background: var(--active-link-color);
 }
 
@@ -235,7 +245,8 @@ Navigation Bar TRANSITIONS
         margin 0.25s ease,
         padding 0.25s ease,
         opacity 0.25s ease,
-        gap 0.25s ease;
+        gap 0.25s ease,
+        background 0.25s ease;
 }
 
 /* 
@@ -250,17 +261,13 @@ Navigation Bar ACTIVE
 }
 
 .side-nav-bar.active #close {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    cursor: none;
+    margin: 0 auto 1.3rem auto;
 }
 
-.side-nav-bar.active #open {
-    position: static;
-    margin: 0 auto 1.3rem auto;
+.side-nav-bar.active #close .menu {
+    white-space: nowrap;
+    max-width: 120px;
     opacity: 1;
-    pointer-events: auto;
 }
 
 .side-nav-bar.active .logo {
@@ -273,6 +280,7 @@ Navigation Bar ACTIVE
     height: 3.25rem;
 }
 
+.side-nav-bar.active #close .exit,
 .side-nav-bar.active .user-wrapper,
 .side-nav-bar.active .logout-button span,
 .side-nav-bar.active .nav-link span {
