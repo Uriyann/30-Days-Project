@@ -95,6 +95,7 @@ Navigation Bar
     height: 1.875rem;
     border-radius: 3.125rem;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .close-button-container button i {
@@ -102,7 +103,9 @@ Navigation Bar
 }
 
 #open {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* User Info */
@@ -208,4 +211,36 @@ Navigation Bar ACTIVE
 .side-nav-bar.active {
     max-width: 4rem;
     padding: 1.2rem 0.4rem;
+}
+
+.side-nav-bar.active #close {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    cursor: none;
+}
+
+.side-nav-bar.active #open {
+    position: static;
+    margin: 0 auto 1.3rem auto;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.side-nav-bar.active .logo {
+    font-size: 1rem;
+}
+
+.side-nav-bar.active .profile-wrapper {
+    position: absolute;
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+.side-nav-bar.active .user-wrapper {
+    opacity: 0;
+    pointer-events: none;
+    cursor: none;
+    user-select: none;
+    white-space: wrap;
 }
