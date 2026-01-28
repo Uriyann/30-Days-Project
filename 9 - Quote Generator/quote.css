@@ -59,3 +59,48 @@ button {
     background: var(--accent-color);
     font-size: 1.0625rem;
 }
+
+.button-container {
+    margin-left: auto;
+}
+
+.button-container button {
+    display: flex;
+    min-width: 8.375rem;
+    justify-content: center;
+    align-items: center;
+    padding: .8125rem .5625rem;
+    gap: .625rem;
+    border-radius: 0 1.25rem;
+    background-color: var(--accent-color);
+    color: #000;
+    font-weight: 700;
+    box-shadow: -0.125rem .1875rem .375rem .0625rem rgba(0, 0, 0, 0.25);
+}
+
+.quote-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.625rem;
+    min-height: 32.6875rem;
+}
+
+.quote {
+    font-size: 4.125rem;
+}
+
+.quote:nth-child(1) {
+    transform: rotate(180deg);
+    margin-right: auto;
+}
+
+.quote:nth-child(3) {
+    margin-left: auto;
+}
+
+.author-container {
+    margin: 0 .625rem auto auto;
+}
+
+.author-container span {}
