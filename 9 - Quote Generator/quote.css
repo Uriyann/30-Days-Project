@@ -41,7 +41,7 @@ button {
     flex-direction: column;
     width: 100%;
     max-width: 58.9375rem;
-    min-height: 39.25rem;
+    min-height: 37.25rem;
     background: var(--box-color);
     box-shadow: 0 .25rem 1.125rem .375rem rgba(0, 0, 0, 0.35);
     border-radius: 1.25rem;
@@ -99,8 +99,16 @@ button {
     margin-left: auto;
 }
 
+.quote-text {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+}
+
 .author-container {
-    margin: 0 .625rem auto auto;
+    margin-left: auto;
+    padding: 0 .625rem;
 }
 
 .author-container span {}
