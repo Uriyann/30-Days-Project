@@ -44,6 +44,10 @@ input {
     outline: none;
 }
 
+input::placeholder {
+    color: #fff;
+}
+
 .calc-wrapper {
     margin-top: 8.375rem;
 }
@@ -55,7 +59,6 @@ input {
     align-items: center;
     width: 100%;
     max-width: 32.0625rem;
-    min-height: 41.25rem;
     padding: 2.125rem 1.9375rem;
     gap: .625rem;
     border-radius: .625rem;
@@ -67,6 +70,7 @@ input {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 1.875rem;
     gap: 1.5625rem;
 }
 
@@ -82,4 +86,38 @@ input {
 #outputBox {
     font-size: 2.5rem;
     font-weight: 600;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .3125rem;
+    width: 100%;
+    min-height: auto;
+}
+
+.calc-buttons button:last-child {
+    grid-column: span 2;
+}
+
+.calc-buttons button {
+    border-radius: .3125rem;
+    padding: 1.0625rem 3rem;
+    box-shadow: 0 .1875rem .3125rem 0 rgba(0, 0, 0, 0.30);
+}
+
+.number {
+    background: var(--number-color);
+}
+
+.operator {
+    background: var(--operator-color);
+}
+
+.delete {
+    background: var(--delete-color);
+}
+
+.sum {
+    background: var(--sum-color);
 }
