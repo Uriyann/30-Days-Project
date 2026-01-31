@@ -33,8 +33,31 @@ function handleOperator(ope) {
 function calculator() {
   if (!previousInput || !currentInput || !operator) return;
 
-  const val1 = Number(currentInput);
-  const val2 = Number(previousInput);
+  const val1 = parseFloat(currentInput);
+  const val2 = parseFloat(previousInput);
 
   let result;
+
+  switch (operator) {
+    case "+":
+      result = val1 + val2;
+      break;
+    case "-":
+      result = val1 - val2;
+      break;
+    case "*":
+      result = val1 * val2;
+      break;
+    case "/":
+      result = val2 !== 0 ? val1 / val2 : "Error";
+      break;
+  }
+}
+
+function clearDisplay() {
+  currentInput = "";
+  operator = null;
+  previousInput = "";
+  inputBox.textContent = "";
+  outBox.textContent = "";
 }
