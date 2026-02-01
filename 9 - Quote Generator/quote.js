@@ -105,4 +105,5 @@ copyQuote.addEventListener("click", async () => {
 
   await navigator.clipboard.writeText(`"${copyText}" - ${copyAuthor}`);
   copyQuote.textContent = "Copied!";
+  copyQuote.style.zIndex = "10";
 });
