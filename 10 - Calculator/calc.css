@@ -18,6 +18,9 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: calc(100vh - 9.25rem);
     background: var(--bg-color);
     color: var(--primary-text-color);
