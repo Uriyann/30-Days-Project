@@ -10,20 +10,20 @@ let previousInput = "";
 let operator = null;
 
 button.addEventListener("click", (event) => {
-  if (!event.target.matches("button")) return;
+  const btn = event.target.closest("button");
+  if (!btn) return;
 
-  const value = event.target.textContent;
-  console.log(value);
+  const value = btn.textContent;
 
-  if (event.target.classlist.contains("number")) {
+  if (btn.classList.contains("number")) {
     handleDecimal(value);
   }
 
-  if (event.target.classlist.contains("operator")) {
+  if (btn.classList.contains("operator")) {
     handleOperator(value);
   }
 
-  if (event.target.classList.contains("sum")) {
+  if (btn.classList.contains("sum")) {
     calculator();
   }
 
@@ -32,7 +32,7 @@ button.addEventListener("click", (event) => {
   }
 
   if (value === "DEL") {
-    deleteLasT();
+    deleteLast();
   }
 });
 
@@ -79,8 +79,8 @@ function calculator() {
       return;
   }
 
-  inputBox.value = result;
-  outBox.value = "";
+  outBox.value = result;
+  inputBox.value = "";
 
   currentInput = result.toString();
   previousInput = "";
