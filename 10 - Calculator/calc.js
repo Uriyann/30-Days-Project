@@ -54,7 +54,7 @@ function handleOperator(ope) {
   if (ope === "x") operator = "*";
   else operator = ope;
 
-  outputBox.value = previousInput + " " + ope;
+  inputBox.value = previousInput + " " + ope;
 }
 
 function calculator() {
